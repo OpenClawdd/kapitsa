@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "kind": "kapitsa-bench",
+  "mode": "full",
+  "time_utc": "2026-10-23T04:12:53Z",
+  "kapitsa": {
+    "version": "0.2.10",
+    "commit": "11cacb5"
+  },
+  "mac": {
+    "identifier": "Mac17,2",
+    "name": "MacBook Pro (14-inch, M5)",
+    "year": 2025,
+    "chip": "Apple M5",
+    "cpu_cores": 10,
+    "gpu_cores": 10,
+    "memory_gb": 32,
+    "macos": "27.0",
+    "macos_build": "26A428"
+  },
+  "model": {
+    "name": "flint",
+    "title": "Recursive Flint 40B-A2.5B",
+    "variant": "4bit",
+    "precision": "4-bit",
+    "catalog": true,
+    "revision": "3b93f90",
+    "decoding": "plain",
+    "decoding_detail": "plain decoding",
+    "drafter": null
+  },
+  "protocol": {
+    "corpus_sha256": "58a7756fd94fc48a7b7306d330b2c44663bdf22faa943f82430966c2878081b2",
+    "decode_tokens": 512,
+    "decode_runs": 5,
+    "greedy_runs": 5,
+    "sizes": [
+      4000,
+      16000
+    ],
+    "temperature": 1.0
+  },
+  "results": {
+    "decode": {
+      "median_tps": 76.96,
+      "runs_tps": [
+        76.96,
+        76.05,
+        77.2,
+        78.16,
+        76.66
+      ]
+    },
+    "decode_greedy": {
+      "median_tps": 77.98,
+      "runs_tps": [
+        77.63,
+        78.51,
+        77.98,
+        77.47,
+        78.3
+      ]
+    },
+    "prefill": [
+      {
+        "size": 4000,
+        "prompt_tokens": 3874,
+        "ttft_s": 2.8411,
+        "tps": 1363.5,
+        "followup_s": [
+          0.1854,
+          0.1747,
+          0.1625
+        ],
+        "followup_median_s": 0.1747
+      },
+      {
+        "size": 16000,
+        "prompt_tokens": 15068,
+        "ttft_s": 12.6737,
+        "tps": 1188.9,
+        "followup_s": [
+          0.1762,
+          0.1941,
+          0.1614
+        ],
+        "followup_median_s": 0.1762
+      }
+    ],
+    "tool_calls": "pass",
+    "peak_memory_gb": 22.16
+  },
+  "conditions": {
+    "power_source": "ac",
+    "power_mode": "automatic",
+    "low_power_mode": false,
+    "thermal_state": "nominal",
+    "swapouts": 0,
+    "gpu_quiet_wait_s": 18.1,
+    "gpu_other_mean_pct": 0.0,
+    "gpu_other_max_pct": 0.0,
+    "gpu_ambient_mean_pct": 0.21,
+    "gpu_users": [],
+    "contention": []
+  },
+  "flags": [],
+  "invalid": []
+}
