@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "kind": "kapitsa-bench",
+  "mode": "full",
+  "time_utc": "2026-10-24T19:46:20Z",
+  "kapitsa": {
+    "version": "0.2.17",
+    "commit": "968fb3f"
+  },
+  "mac": {
+    "identifier": "Mac17,2",
+    "name": "MacBook Pro (14-inch, M5)",
+    "year": 2025,
+    "chip": "Apple M5",
+    "cpu_cores": 10,
+    "gpu_cores": 10,
+    "memory_gb": 32,
+    "macos": "27.0",
+    "macos_build": "26A428"
+  },
+  "model": {
+    "name": "nemotron-3.5-bolt",
+    "title": "Nemotron 3.5 Bolt 74B-A9B",
+    "variant": "24gb",
+    "precision": "NVIDIA 24 GB",
+    "catalog": true,
+    "revision": "c6cc2e8",
+    "decoding": "LiLiCorr",
+    "decoding_detail": "LiLiCorr speculative decoding (7-token blocks), KFlash (LiLiCorr)",
+    "drafter": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr@abd4780"
+  },
+  "protocol": {
+    "corpus_sha256": "58a7756fd94fc48a7b7306d330b2c44663bdf22faa943f82430966c2878081b2",
+    "decode_tokens": 512,
+    "decode_runs": 5,
+    "greedy_runs": 5,
+    "sizes": [
+      4000,
+      16000
+    ],
+    "temperature": 0.6
+  },
+  "results": {
+    "decode": {
+      "median_tps": 46.73,
+      "runs_tps": [
+        49.87,
+        45.79,
+        44.37,
+        46.73,
+        47.92
+      ]
+    },
+    "decode_greedy": {
+      "median_tps": 50.24,
+      "runs_tps": [
+        50.24,
+        48.57,
+        51.19,
+        51.59,
+        48.5
+      ]
+    },
+    "prefill": [
+      {
+        "size": 4000,
+        "prompt_tokens": 4184,
+        "ttft_s": 11.5824,
+        "tps": 361.2,
+        "followup_s": [
+          0.373,
+          0.4121,
+          0.3264
+        ],
+        "followup_median_s": 0.373,
+        "followup_suffix_tps": 61.3
+      },
+      {
+        "size": 16000,
+        "prompt_tokens": 16514,
+        "ttft_s": 47.6534,
+        "tps": 346.5,
+        "followup_s": [
+          0.4007,
+          0.4425,
+          0.3533
+        ],
+        "followup_median_s": 0.4007,
+        "followup_suffix_tps": 56.6
+      }
+    ],
+    "tool_calls": "pass",
+    "peak_memory_gb": 23.0
+  },
+  "conditions": {
+    "power_source": "ac",
+    "power_mode": "automatic",
+    "low_power_mode": false,
+    "thermal_state": "nominal",
+    "swapouts": 0,
+    "gpu_quiet_wait_s": 18.1,
+    "gpu_other_mean_pct": 0.0,
+    "gpu_other_max_pct": 0.0,
+    "gpu_ambient_mean_pct": 0.17,
+    "gpu_users": [],
+    "contention": []
+  },
+  "flags": [],
+  "invalid": []
+}
